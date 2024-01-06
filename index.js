@@ -73,7 +73,6 @@ const rename = (oldName,newName)=>{
      currdir(cmd,(currDir)=>{
           const res = `${currDir}`;
           const oldPath = path.join(res,oldName);
-          console.log(oldName);
           const newPath = path.join(res,newName);
           fs.rename(oldPath,newName,(err)=>{
                if(err){
@@ -112,4 +111,3 @@ const movefile = (oldPath,newPath)=>{
      });
 }
 const cutfile = movefile;
-program.parse(process.argv);
